@@ -2,6 +2,11 @@ name: React Base
 on: ["workflow_dispatch", "push"]
 
 jobs:
+  test-git:
+    runs-on: ubuntu-latest
+    steps:
+       - name: testls
+         run: ls      
   build-app:
        runs-on: ubuntu-latest
        steps:
