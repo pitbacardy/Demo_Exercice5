@@ -1,0 +1,15 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Demo Workflow
+
+# Controls when the workflow will run
+on: workflow_dispatch
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+       - name: First step
+         run: echo "It Works"
+       
+    
