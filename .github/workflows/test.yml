@@ -11,5 +11,10 @@ jobs:
     steps:
        - name: First step
          run: echo "It Works"
+  job-bis:
+      runs-on: ubuntu-slim
+      steps:
+        - name: second step
+          run: ping free.fr
        
     
