@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Demo Workflow
+
+# Controls when the workflow will run
+on: workflow_dispatch
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Compil
+         run: echo "compilation OK"
+  job-bis:
+      runs-on: ubuntu-slim
+      steps:
+        - name: Test
+          run: echo "test OK"
+  job-Ter:
+      runs-on: ubuntu-slim
+      steps:
+        - name: package
+          run: echo "Package OK"
+  demo-jobs_1:
+    runs-on: ubuntu-latest
+    steps:
+     - name: First step
+       run: echo "It Works"       
+  jobs-bis_1:
+      needs : [demo-jobs_1]
+      runs-on: ubuntu-slim
+      steps:
+        - name: Get Hwiki infos
+          run: curl https://hwiki.xyz/
+          
+
+       
+    
